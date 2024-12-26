@@ -14,3 +14,4 @@
 *.webp
 *.webm
 *.webm
+__pycache__/

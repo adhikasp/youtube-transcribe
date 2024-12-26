@@ -37,19 +37,39 @@ Useful for creating a summary of a podcast or youtube video that don't have tran
 
 ## Usage
 
-### Download Audio from YouTube
+### Process Everything in One Command
+
+The easiest way to use this tool is with the `main.py` script, which will handle the entire process:
+
+```bash
+python main.py <youtube_url> [--output-dir OUTPUT_DIR] [--keep-files]
+```
+
+This will:
+1. Download the audio from the YouTube video
+2. Transcribe it to text
+3. Generate a summary
+4. Clean up intermediate files (audio and transcript)
+
+By default, only the final summary file (`.summary.md`) is kept. Use the `--keep-files` flag if you want to keep the intermediate audio and transcript files.
+
+### Individual Steps
+
+If you need more control, you can also run each step individually:
+
+#### Download Audio from YouTube
 
 ```bash
 python download.py <youtube_url> [--output-dir OUTPUT_DIR]
 ```
 
-### Transcribe Audio to Text
+#### Transcribe Audio to Text
 
 ```bash
 python transcribe.py <audio_file_path>
 ```
 
-### Generate Summary from Transcript
+#### Generate Summary from Transcript
 
 ```bash
 python summarize.py <transcript_file_path>
