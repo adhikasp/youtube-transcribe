@@ -25,7 +25,7 @@ def summarize_text(input_file_path):
         str: Summarized text
     """
     # Initialize Gemini model
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-2.0-flash-exp')
     
     # Create output filename
     output_file = Path(input_file_path).with_suffix('.summary.md')

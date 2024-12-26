@@ -23,7 +23,7 @@ class Segment:
 
 def transcribe_segment(segment: Segment, retries: int = 10) -> str:
     """Transcribe an audio segment with retry logic"""
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-2.0-flash-exp')
     prompt = "Please transcribe this audio segment completely. Add the speaker name or identifier for each sentence."
     
     for attempt in range(retries):
