@@ -66,8 +66,10 @@ python download.py <youtube_url> [--output-dir OUTPUT_DIR]
 #### Transcribe Audio to Text
 
 ```bash
-python transcribe.py <audio_file_path>
+python transcribe.py <audio_file_path> [--max-workers MAX_WORKERS]
 ```
+
+The transcription process splits the audio into 5-minute segments and processes them in parallel. You can control the number of parallel workers with the `--max-workers` option (default: 3).
 
 #### Generate Summary from Transcript
 
