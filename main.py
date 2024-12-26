@@ -61,6 +61,7 @@ def process_video(url: str, output_dir: str = None) -> str:
         
         print("\n=== Processing completed successfully! ===")
         print(f"Summary file saved to: {summary_path}")
+        print(f"\n{summary}")
         
         return str(summary_path)
         
